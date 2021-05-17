@@ -1,0 +1,14 @@
+<div class="d-flex" style="justify-content: space-around; align-items: center;">
+  <h1>Héroes <small>Marvel y DC</small></h1>
+  <button (click)="regresar()" style="height: 40px;" class="btn btn-outline-danger">Volver</button>
+</div>
+<hr>
+<div class="alert alert-primary" role="alert" *ngIf="!hayHeroes()">
+  No se encontró nada por el término: {{termino}}.
+</div>
+<div class="alert alert-primary" role="alert" *ngIf="termino == ''">
+  Ingresa algún término si quieres realizar la búsqueda.
+</div>
+<div class="row row-cols-1 row-cols-md-3 g-4" *ngIf="hayHeroes()">
+  <app-heroe-card *ngFor="let heroe of heroes" [heroe]="heroe" [index]="heroe.idx"></app-heroe-card>
+</div>

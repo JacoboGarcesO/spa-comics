@@ -1,0 +1,17 @@
+<h1>{{heroe.nombre | uppercase}} - <small> {{heroe.aparicion | date: 'y'}}</small></h1>
+<hr>
+<div class="row animated fadeIn fast">
+    <div class="col-md-4">
+        <img [src]="heroe.img" class="img-fluid mb-4" [alt]="heroe.nombre">
+        <br>
+        <button (click)="regresar()" class="btn btn-outline-danger mb-2" style="width: 100%;">Volver</button>
+    </div>
+    <div class="col-md-8">
+        <h3>{{heroe.nombre}}</h3>
+        <hr>
+        <p>{{heroe.bio}}</p>
+        <div class="text-center">
+            <img [src]="imgProductora()" class="img-fluid" width="150px" height="150px" alt="img-productora">
+        </div>
+    </div>
+</div>
