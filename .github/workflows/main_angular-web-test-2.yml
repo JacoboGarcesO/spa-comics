@@ -52,4 +52,4 @@ jobs:
           app-name: 'angular-web-test-2'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9F25DA30702B4529897DC453920627D3 }}
-          package: ./dist/spa-comics
+          package: ./dist
